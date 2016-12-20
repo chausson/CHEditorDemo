@@ -13,6 +13,7 @@
 #import "CHEditorTextCell.h"
 #import "CHEditorImageCell.h"
 #import <UITableView+FDTemplateLayoutCell/UITableView+FDTemplateLayoutCell.h>
+
 @interface CHEditor ()<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic , strong) NSArray <CHEdtiorElement *>*elements;
 @end

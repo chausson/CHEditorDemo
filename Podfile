@@ -8,6 +8,5 @@ target 'CHEditorDemo' do
 pod 'UITableView+FDTemplateLayoutCell'
 pod 'Masonry'
 pod 'CHImagePicker'
-pod 'ESHRequestKit', :git => 'http://xiaos@182.254.141.244:7990/scm/ecoc/ios-api.git'
 
 end
