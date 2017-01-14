@@ -12,6 +12,9 @@
 @property (nonatomic , strong) UIButton *del;
 @property (nonatomic , strong) UIButton *edit;
 @property (nonatomic , strong) UIView *container;
+@property (nonatomic , strong) UIView *maskcontainer;
+@property (nonatomic , strong) UIImageView *backgroundFrame;
+
 - (void)layout; //约束布局
 - (void)loadElement:(CHEdtiorElement *)aElement;
 @end

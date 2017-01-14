@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		060397441E23857500959F59 /* kuang@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 060397421E23857500959F59 /* kuang@2x.png */; };
+		060397451E23857500959F59 /* kuang@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 060397431E23857500959F59 /* kuang@3x.png */; };
 		060A46CA1DE6D6C900AE5A3F /* CHEditorTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 060A46C91DE6D6C900AE5A3F /* CHEditorTextCell.m */; };
 		060A46CD1DE6D6D800AE5A3F /* CHEditorImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 060A46CC1DE6D6D800AE5A3F /* CHEditorImageCell.m */; };
 		060A46D51DE6EA4F00AE5A3F /* CHEditorElementCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 060A46D41DE6EA4F00AE5A3F /* CHEditorElementCell.m */; };
@@ -26,6 +28,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		060397421E23857500959F59 /* kuang@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "kuang@2x.png"; sourceTree = "<group>"; };
+		060397431E23857500959F59 /* kuang@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "kuang@3x.png"; sourceTree = "<group>"; };
 		060A46C81DE6D6C900AE5A3F /* CHEditorTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHEditorTextCell.h; sourceTree = "<group>"; };
 		060A46C91DE6D6C900AE5A3F /* CHEditorTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHEditorTextCell.m; sourceTree = "<group>"; };
 		060A46CB1DE6D6D800AE5A3F /* CHEditorImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHEditorImageCell.h; sourceTree = "<group>"; };
@@ -72,6 +76,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		060397411E23857500959F59 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				060397421E23857500959F59 /* kuang@2x.png */,
+				060397431E23857500959F59 /* kuang@3x.png */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 		066433721DE2E4CE00B1BBE7 = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +131,7 @@
 		066433951DE2F35000B1BBE7 /* CHEditor */ = {
 			isa = PBXGroup;
 			children = (
+				060397411E23857500959F59 /* Resource */,
 				066433961DE2F35000B1BBE7 /* Controller */,
 				0664339B1DE2F35000B1BBE7 /* Model */,
 				066433A21DE2F35000B1BBE7 /* View */,
@@ -246,7 +260,9 @@
 			files = (
 				0664338E1DE2E4D000B1BBE7 /* LaunchScreen.storyboard in Resources */,
 				0664338B1DE2E4D000B1BBE7 /* Assets.xcassets in Resources */,
+				060397451E23857500959F59 /* kuang@3x.png in Resources */,
 				066433891DE2E4D000B1BBE7 /* Main.storyboard in Resources */,
+				060397441E23857500959F59 /* kuang@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

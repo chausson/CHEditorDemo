@@ -10,6 +10,7 @@
 #import "CHEditorImageElement.h"
 #import "CHEditorTextElement.h"
 @interface CHEditCreator : NSObject
++ (CHEdtiorElement *)editingTextElement;
 + (CHEditorImageElement *)createImageElement:(UIImage *)image;
 + (CHEditorTextElement *)createTextElement:(NSString *)text;
 @end

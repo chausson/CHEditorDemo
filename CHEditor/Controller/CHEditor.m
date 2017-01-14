@@ -12,7 +12,7 @@
 #import "CHEditorImageElement.h"
 #import "CHEditorTextCell.h"
 #import "CHEditorImageCell.h"
-#import <UITableView+FDTemplateLayoutCell/UITableView+FDTemplateLayoutCell.h>
+#import <UITableView_FDTemplateLayoutCell/UITableView+FDTemplateLayoutCell.h>
 
 @interface CHEditor ()<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic , strong) NSArray <CHEdtiorElement *>*elements;
@@ -70,7 +70,9 @@
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     CHEdtiorElement *element = _elements[indexPath.row];
-//    return 100;
+ 
+    NSAssert([element isKindOfClass:[CHEdtiorElement class]], @"插入的类型必须是CHEdtiorElement");
+
     CGFloat height = [tableView fd_heightForCellWithIdentifier:element.identifer cacheByIndexPath:indexPath configuration:^(CHEditorElementCell *cell) {
         [cell loadElement:element];
     }];

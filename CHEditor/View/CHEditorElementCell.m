@@ -13,11 +13,25 @@
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        self.container = [[UIView alloc]init];
-        self.container.backgroundColor = [UIColor whiteColor];
         [self.contentView addSubview:self.container];
     }
     return self;
+}
+- (UIView *)container{
+    if (!_container) {
+        _container = [[UIView alloc]init];
+        _container.backgroundColor = [UIColor whiteColor];
+    }
+    return _container;
+}
+- (UIView *)maskcontainer{
+    if (!_maskcontainer) {
+        _maskcontainer = [[UIView alloc]init];
+        _maskcontainer.backgroundColor = [UIColor lightGrayColor];
+        _maskcontainer.alpha = 0.65f;
+        _maskcontainer.hidden = YES;
+    }
+    return _maskcontainer;
 }
 - (void)layout{
     [self.container mas_remakeConstraints:^(MASConstraintMaker *make) {

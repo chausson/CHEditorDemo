@@ -14,7 +14,7 @@
 #import <Masonry/Masonry.h>
 @interface ViewController ()<UITextFieldDelegate,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UIView *bottomView;
-@property (weak, nonatomic) IBOutlet UITextField *textField;
+@property (weak, nonatomic) IBOutlet UITextView *textFiled;
 @property (strong ,nonatomic) CHEditor *editor;
 @end
 
@@ -34,7 +34,7 @@
     [self registerForKeyboardNotifications];
 }
 - (IBAction)pick:(UIButton *)sender {
-    [_textField resignFirstResponder];
+    [_textFiled resignFirstResponder];
     [CHImagePicker show:YES picker:self completion:^(UIImage *image) {
         [_editor inputElement:[CHEditCreator createImageElement:image]];
     }];
@@ -50,10 +50,10 @@
 
 }
 - (IBAction)send:(UIButton *)sender {
-    if (self.textField.text.length > 0) {
-        CHEditorTextElement *element = [CHEditCreator createTextElement:self.textField.text];
+    if (self.textFiled.text.length > 0) {
+        CHEditorTextElement *element = [CHEditCreator createTextElement:self.textFiled.text];
         [_editor inputElement:element];
-        self.textField.text = nil;
+        self.textFiled.text = nil;
         [_editor.view  scrollToRowAtIndexPath:
          [NSIndexPath indexPathForRow:[self.editor.elements count]-1 inSection:0]
                              atScrollPosition: UITableViewScrollPositionBottom
@@ -61,7 +61,11 @@
     }
 
 }
-
+#pragma mark textfiled Delegate
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
+    
+    return YES;
+}
 #pragma mark 注册通知
 - (void)registerForKeyboardNotifications{
     

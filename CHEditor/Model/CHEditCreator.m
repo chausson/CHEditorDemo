@@ -19,4 +19,8 @@
     element.text = text;
     return element;
 }
++ (CHEdtiorElement *)editingTextElement{
+    CHEdtiorElement *element = [[CHEdtiorElement alloc]init];
+    return element;
+}
 @end
