@@ -24,6 +24,7 @@
 		066433A51DE2F35000B1BBE7 /* CHEditorImageElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 0664339D1DE2F35000B1BBE7 /* CHEditorImageElement.m */; };
 		066433A61DE2F35000B1BBE7 /* CHEditorTextElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 0664339F1DE2F35000B1BBE7 /* CHEditorTextElement.m */; };
 		066433A71DE2F35000B1BBE7 /* CHEdtiorElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 066433A11DE2F35000B1BBE7 /* CHEdtiorElement.m */; };
+		06B422DE1E45DCE800EAE4F3 /* CHEditorTitleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06B422DD1E45DCE800EAE4F3 /* CHEditorTitleCell.m */; };
 		7786C6B80B6B679BE714FAD3 /* Pods_CHEditorDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB2BFAC4416852B5DF00A24C /* Pods_CHEditorDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +60,8 @@
 		0664339F1DE2F35000B1BBE7 /* CHEditorTextElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHEditorTextElement.m; sourceTree = "<group>"; };
 		066433A01DE2F35000B1BBE7 /* CHEdtiorElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHEdtiorElement.h; sourceTree = "<group>"; };
 		066433A11DE2F35000B1BBE7 /* CHEdtiorElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHEdtiorElement.m; sourceTree = "<group>"; };
+		06B422DC1E45DCE800EAE4F3 /* CHEditorTitleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHEditorTitleCell.h; sourceTree = "<group>"; };
+		06B422DD1E45DCE800EAE4F3 /* CHEditorTitleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHEditorTitleCell.m; sourceTree = "<group>"; };
 		427EF73C59A416487EDCFE9B /* Pods-CHEditorDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CHEditorDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CHEditorDemo/Pods-CHEditorDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		B341F5A91337B435010ED3E6 /* Pods-CHEditorDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CHEditorDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-CHEditorDemo/Pods-CHEditorDemo.release.xcconfig"; sourceTree = "<group>"; };
 		DB2BFAC4416852B5DF00A24C /* Pods_CHEditorDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CHEditorDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -175,6 +178,8 @@
 				060A46CC1DE6D6D800AE5A3F /* CHEditorImageCell.m */,
 				060A46D31DE6EA4F00AE5A3F /* CHEditorElementCell.h */,
 				060A46D41DE6EA4F00AE5A3F /* CHEditorElementCell.m */,
+				06B422DC1E45DCE800EAE4F3 /* CHEditorTitleCell.h */,
+				06B422DD1E45DCE800EAE4F3 /* CHEditorTitleCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -333,6 +338,7 @@
 				060A46CA1DE6D6C900AE5A3F /* CHEditorTextCell.m in Sources */,
 				066433A61DE2F35000B1BBE7 /* CHEditorTextElement.m in Sources */,
 				066433A31DE2F35000B1BBE7 /* CHEditor.m in Sources */,
+				06B422DE1E45DCE800EAE4F3 /* CHEditorTitleCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

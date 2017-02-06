@@ -12,6 +12,7 @@
 #import "CHEditorImageElement.h"
 #import "CHEditorTextCell.h"
 #import "CHEditorImageCell.h"
+#import "CHEditorTitleCell.h"
 #import <UITableView_FDTemplateLayoutCell/UITableView+FDTemplateLayoutCell.h>
 
 @interface CHEditor ()<UITableViewDataSource,UITableViewDelegate>
@@ -56,27 +57,39 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return _elements.count;
+    return _elements.count+1;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     CHEdtiorElement *element = _elements[indexPath.row];
-    CHEditorElementCell *cell = [tableView dequeueReusableCellWithIdentifier:element.identifer];
+    if (indexPath.row == 0) {
+        CHEditorTitleCell *cell = [[CHEditorTitleCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
+        
+        return cell;
+    }else{
+        CHEditorElementCell *cell = [tableView dequeueReusableCellWithIdentifier:element.identifer];
+        
+        [cell loadElement:element];
+        
+        return cell;
+    }
 
-    [cell loadElement:element];
-
-    return cell;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    CHEdtiorElement *element = _elements[indexPath.row];
- 
-    NSAssert([element isKindOfClass:[CHEdtiorElement class]], @"插入的类型必须是CHEdtiorElement");
+    
+    if (indexPath.row == 0) {
+        return [CHEditorTitleCell cellHeight];
+    }else{
+        CHEdtiorElement *element = _elements[indexPath.row];
+        
+        NSAssert([element isKindOfClass:[CHEdtiorElement class]], @"插入的类型必须是CHEdtiorElement");
+        
+        CGFloat height = [tableView fd_heightForCellWithIdentifier:element.identifer cacheByIndexPath:indexPath configuration:^(CHEditorElementCell *cell) {
+            [cell loadElement:element];
+        }];
+        return height;
+    }
 
-    CGFloat height = [tableView fd_heightForCellWithIdentifier:element.identifer cacheByIndexPath:indexPath configuration:^(CHEditorElementCell *cell) {
-        [cell loadElement:element];
-    }];
-    NSLog(@"h=%g",height);
-    return height;
 }
 @end
