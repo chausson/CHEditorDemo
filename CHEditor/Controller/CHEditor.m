@@ -62,12 +62,13 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    CHEdtiorElement *element = _elements[indexPath.row];
     if (indexPath.row == 0) {
         CHEditorTitleCell *cell = [[CHEditorTitleCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
         
         return cell;
     }else{
+        CHEdtiorElement *element = _elements[indexPath.row-1];
+
         CHEditorElementCell *cell = [tableView dequeueReusableCellWithIdentifier:element.identifer];
         
         [cell loadElement:element];
@@ -81,7 +82,7 @@
     if (indexPath.row == 0) {
         return [CHEditorTitleCell cellHeight];
     }else{
-        CHEdtiorElement *element = _elements[indexPath.row];
+        CHEdtiorElement *element = _elements[indexPath.row-1];
         
         NSAssert([element isKindOfClass:[CHEdtiorElement class]], @"插入的类型必须是CHEdtiorElement");
         
